@@ -3242,7 +3242,7 @@ create procedure WS.WS."/!sparql/" (inout path varchar, inout params any, inout 
   named_graphs := vector ();
   using_graphs := vector ();
   using_named_graphs := vector ();
-  maxrows := 1024*1024; -- More than enough for web-interface.
+  maxrows := 1024; -- More than enough for web-interface.
   deadl := 0;
   http_meth := http_request_get ('REQUEST_METHOD');
   ini_dflt_graph := virtuoso_ini_item_value ('SPARQL', 'DefaultGraph');
